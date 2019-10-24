@@ -1,0 +1,1120 @@
+<html>
+<body>
+<pre>
+<h1>�Vision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: �Vision V5.14.0.0
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: !!! Microsoft, Microsoft, LIC=QF830-B74JA-EVB1R-KXAMT-GL923-6WCMT
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Standard  Version: 5.14.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 1 (build 106)
+Assembler:       Armasm.exe V5.05 update 1 (build 106)
+Linker/Locator:  ArmLink.exe V5.05 update 1 (build 106)
+Library Manager: ArmAr.exe V5.05 update 1 (build 106)
+Hex Converter:   FromElf.exe V5.05 update 1 (build 106)
+CPU DLL:         SARMCM3.DLL V5.14.0.0
+Dialog DLL:      DCM.DLL V1.13.1.0
+Target DLL:      Segger\JL2CM3.dll V2.99.13.0
+Dialog DLL:      TCM.DLL V1.14.4.0
+ 
+<h2>Project:</h2>
+D:\Repos\TIK-REG\MDK-ARM\BB2.uvprojx
+Project File Date:  08/19/2019
+
+<h2>Output:</h2>
+Build target 'BB2'
+compiling event_groups.c...
+compiling port.c...
+compiling queue.c...
+compiling tasks.c...
+compiling timers.c...
+compiling cmsis_os.c...
+compiling list.c...
+compiling croutine.c...
+compiling heap_4.c...
+compiling ff.c...
+compiling ff_gen_drv.c...
+compiling diskio.c...
+compiling syscall.c...
+compiling unicode.c...
+compiling sd_diskio.c...
+compiling fatfs.c...
+compiling stm32f4xx_hal_msp.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Src/stm32f4xx_hal_msp.c: 1 warning, 0 errors
+compiling main.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Src/main.c: 1 warning, 0 errors
+compiling freertos.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Inc/LogSD.h(12): warning:  #1295-D: Deprecated declaration MBusMasterPlaner - give arg types
+  void MBusMasterPlaner();
+../Inc/LogSD.h(16): warning:  #1295-D: Deprecated declaration TCP_GSM_Listener - give arg types
+  void TCP_GSM_Listener();
+../Inc/LogSD.h(12): warning:  #1295-D: Deprecated declaration MBusMasterPlaner - give arg types
+  void MBusMasterPlaner();
+../Inc/LogSD.h(16): warning:  #1295-D: Deprecated declaration TCP_GSM_Listener - give arg types
+  void TCP_GSM_Listener();
+../Src/freertos.c(167): warning:  #1000-D: a storage class may not be specified here
+  extern struct devices
+../Src/freertos.c(203): warning:  #1000-D: a storage class may not be specified here
+  extern struct events
+../Src/freertos.c(427): warning:  #188-D: enumerated type mixed with another type
+                POWER_LED_ON;
+../Src/freertos.c(428): warning:  #188-D: enumerated type mixed with another type
+                MB_LED_ON;
+../Src/freertos.c(429): warning:  #188-D: enumerated type mixed with another type
+                REL_LED_ON;
+../Src/freertos.c(486): warning:  #188-D: enumerated type mixed with another type
+        POWER_LED_ON;
+../Src/freertos.c(1128): warning:  #177-D: variable "taskWoken" was declared but never referenced
+        portBASE_TYPE taskWoken = pdTRUE; 
+../Src/freertos.c(1144): warning:  #188-D: enumerated type mixed with another type
+        HAL_GPIO_WritePin(GPIOC, GPIO_PIN_6,0);
+../Src/freertos.c(1145): warning:  #188-D: enumerated type mixed with another type
+        HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7,0);
+../Src/freertos.c(1147): warning:  #188-D: enumerated type mixed with another type
+        HAL_GPIO_WritePin(GPIOD, GPIO_PIN_10,1); // Действия, направленные на запуск GSM модема
+../Src/freertos.c(1150): warning:  #188-D: enumerated type mixed with another type
+        HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7,1);
+../Src/freertos.c(1152): warning:  #188-D: enumerated type mixed with another type
+        HAL_GPIO_WritePin(GPIOC, GPIO_PIN_6,1);
+../Src/freertos.c(1153): warning:  #188-D: enumerated type mixed with another type
+        HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7,0);
+../Src/freertos.c(1158): warning:  #188-D: enumerated type mixed with another type
+        HAL_GPIO_WritePin(GPIOD, GPIO_PIN_13,0);
+../Src/freertos.c(1163): warning:  #188-D: enumerated type mixed with another type
+        HAL_GPIO_WritePin(GPIOD, GPIO_PIN_10,0);
+../Src/freertos.c(1169): warning:  #188-D: enumerated type mixed with another type
+        HAL_GPIO_WritePin(GPIOD, GPIO_PIN_10,1);// Конец включения GSM модема
+../Src/freertos.c(1254): warning:  #223-D: function "CheckUpdates" declared implicitly
+                                                                uint8_t errU = CheckUpdates();
+../Src/freertos.c(1317): warning:  #177-D: variable "s" was declared but never referenced
+                                                                                u32_t d,mon,y,h,min,s;
+../Src/freertos.c(1179): warning:  #177-D: variable "err" was declared but never referenced
+                                        err_t err;
+../Src/freertos.c(1182): warning:  #177-D: variable "size" was declared but never referenced
+                                        uint32_t size;
+../Src/freertos.c(1183): warning:  #177-D: variable "fn" was declared but never referenced
+                                        char *fn;
+../Src/freertos.c(1437): warning:  #223-D: function "RTU_S" declared implicitly
+                RTU_S();
+../Src/freertos.c(1577): warning:  #177-D: variable "err" was declared but never referenced
+                                        err_t err;
+../Src/freertos.c(1580): warning:  #177-D: variable "size" was declared but never referenced
+                                        uint32_t size,lasttime = 0xffffffff;
+../Src/freertos.c(1581): warning:  #177-D: variable "fn" was declared but never referenced
+                                        char *fn;   /* This function is assuming non-Unicode cfg. */
+../Src/freertos.c(1582): warning:  #177-D: variable "smon" was declared but never referenced
+                                        char smon[4]={0},lastname[40]={0};
+../Src/freertos.c(1583): warning:  #177-D: variable "s" was declared but never referenced
+                                        u32_t d,mon,y,h,min,s,t;
+../Src/freertos.c(1712): warning:  #177-D: variable "errM" was declared but never referenced
+        int errM;
+../Src/freertos.c(1875): warning:  #177-D: variable "regvalue" was declared but never referenced
+        uint32_t regvalue = 0;
+../Src/freertos.c(2079): warning:  #177-D: variable "file3" was declared but never referenced
+        FIL file3;
+../Src/freertos.c(2080): warning:  #177-D: variable "f_err" was declared but never referenced
+        FRESULT f_err;
+../Src/freertos.c(2081): warning:  #177-D: variable "list" was declared but never referenced
+        osStatus list;
+../Src/freertos.c(2082): warning:  #177-D: variable "sdatestructureget" was declared but never referenced
+        RTC_DateTypeDef sdatestructureget;
+../Src/freertos.c(2083): warning:  #177-D: variable "stimestructureget" was declared but never referenced
+    RTC_TimeTypeDef stimestructureget;
+../Src/freertos.c(2085): warning:  #177-D: variable "c" was declared but never referenced
+        int c;
+../Src/freertos.c(2191): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                if(strstr(data_com3_IN, "KVIT")!=0) // Отправить смс "KVIT" для квитирования реле
+../Src/freertos.c(2198): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                if(strstr(data_com3_IN, "Update")!=0) 
+../Src/freertos.c(2203): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                if(strstr(data_com3_IN, "SendFromSector")!=0) // Отправить файлы из временного сектора (SendFromSector 21.02.19 14:25 11.01.19 15:25)
+../Src/freertos.c(2213): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                        target = strstr(data_com3_IN, "SendFromSector");
+../Src/freertos.c(2244): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                if(strstr(data_com3_IN, "StartSending")!=0) // Отправлять файлы на фтп
+../Src/freertos.c(2249): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                if(strstr(data_com3_IN, "StopSending")!=0) // Не отправлять файлы на фтп
+../Src/freertos.c(2255): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                if(strstr(data_com3_IN, "AddPhoneNum")!=0) // Отправить смс "AddPhoneNum +7*" для добавления номера СМС уведомлений
+../Src/freertos.c(2258): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                        target = strstr(data_com3_IN, "AddPhoneNum");
+../Src/freertos.c(2277): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                if(strstr(data_com3_IN, "DEL EVENTLOG")!=0) // Отправить смс "ChangeNum +7*" для изменения номера СМС уведомлений
+../Src/freertos.c: 49 warnings, 0 errors
+compiling lwip.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Src/lwip.c: 1 warning, 0 errors
+compiling stm32f4xx_it.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Src/stm32f4xx_it.c(76): warning:  #1000-D: a storage class may not be specified here
+  extern struct devices
+../Src/stm32f4xx_it.c(315): warning:  #223-D: function "memset" declared implicitly
+                                memset(data_master_IN,0,com_max);
+../Src/stm32f4xx_it.c(318): warning:  #188-D: enumerated type mixed with another type
+                                MB_LED_OFF;
+../Src/stm32f4xx_it.c(412): warning:  #177-D: variable "taskWoken" was declared but never referenced
+        portBASE_TYPE taskWoken = pdTRUE;
+../Src/stm32f4xx_it.c: 5 warnings, 0 errors
+compiling ethernetif.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Src/ethernetif.c(262): warning:  #177-D: variable "hal_eth_init_status" was declared but never referenced
+    HAL_StatusTypeDef hal_eth_init_status;
+../Src/ethernetif.c: 2 warnings, 0 errors
+compiling bsp_driver_sd.c...
+compiling httpserver-netconn.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Inc/LogSD.h(12): warning:  #1295-D: Deprecated declaration MBusMasterPlaner - give arg types
+  void MBusMasterPlaner();
+../Inc/LogSD.h(16): warning:  #1295-D: Deprecated declaration TCP_GSM_Listener - give arg types
+  void TCP_GSM_Listener();
+..\Src\httpserver-netconn.c(66): warning:  #1000-D: a storage class may not be specified here
+  extern struct events
+..\Src\httpserver-netconn.c(80): warning:  #1000-D: a storage class may not be specified here
+  extern struct devices
+..\Src\httpserver-netconn.c(309): warning:  #177-D: variable "c" was declared but never referenced
+                                                unsigned int c;
+..\Src\httpserver-netconn.c(324): warning:  #177-D: variable "c" was declared but never referenced
+                                                unsigned int c;
+..\Src\httpserver-netconn.c(339): warning:  #177-D: variable "c" was declared but never referenced
+                                                unsigned int c;
+..\Src\httpserver-netconn.c(413): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+                                                                                sprintf(&data_com3_OUT[0],"+++");
+..\Src\httpserver-netconn.c(426): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+                                                                                sprintf(&data_com3_OUT[0],"at^sist=%d\r\n",TransMode);
+..\Src\httpserver-netconn.c(427): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                                                                                line3=strlen(&data_com3_OUT[0]); n_com3=0;
+..\Src\httpserver-netconn.c(466): warning:  #188-D: enumerated type mixed with another type
+                                                RELAY_ON;
+..\Src\httpserver-netconn.c(467): warning:  #188-D: enumerated type mixed with another type
+                                                REL_LED_ON;
+..\Src\httpserver-netconn.c(470): warning:  #188-D: enumerated type mixed with another type
+                                                RELAY_OFF;
+..\Src\httpserver-netconn.c(471): warning:  #188-D: enumerated type mixed with another type
+                                                REL_LED_OFF;
+..\Src\httpserver-netconn.c(482): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                                                        err = convert_utf8_to_windows1251(MSGbuf, &Phones[NumPhones][0]);
+..\Src\httpserver-netconn.c(487): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                                                        err = convert_utf8_to_windows1251(MSGbuf, &Phones[9][0]);
+..\Src\httpserver-netconn.c(535): warning:  #188-D: enumerated type mixed with another type
+                                                        HAL_GPIO_WritePin(GPIOD, GPIO_PIN_0,0);
+..\Src\httpserver-netconn.c(867): warning:  #177-D: variable "LTHandle" was declared but never referenced
+                                                TaskHandle_t LTHandle;
+..\Src\httpserver-netconn.c(870): warning:  #177-D: variable "sometime" was declared but never referenced
+                                                u32_t sometime;
+..\Src\httpserver-netconn.c(1003): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                                                err = convert_utf8(MSGbuf, &smsMSG[1][0]);
+..\Src\httpserver-netconn.c(1007): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                                                err = convert_utf8(MSGbuf, &smsMSG[2][0]);
+..\Src\httpserver-netconn.c(1011): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                                                err = convert_utf8(MSGbuf, &smsMSG[3][0]);
+..\Src\httpserver-netconn.c(1017): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                                                        err = convert_utf8(MSGbuf, &smsMSG[4][0]);
+..\Src\httpserver-netconn.c(1168): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+                                                        strncpy(&Phones[i][0],&Phones[i+1][0],12);
+..\Src\httpserver-netconn.c(1168): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                                                        strncpy(&Phones[i][0],&Phones[i+1][0],12);
+..\Src\httpserver-netconn.c(1179): warning:  #550-D: variable "flash_ok" was set but never used
+                                                HAL_StatusTypeDef       flash_ok = HAL_ERROR;
+..\Src\httpserver-netconn.c(255): warning:  #550-D: variable "err" was set but never used
+        char MSGbuf[300],err;
+..\Src\httpserver-netconn.c(256): warning:  #177-D: variable "num" was declared but never referenced
+        int num;
+..\Src\httpserver-netconn.c(1306): warning:  #550-D: variable "list" was set but never used
+        osStatus list;
+..\Src\httpserver-netconn.c(1435): warning:  #225-D: the format string ends before this argument
+                sprintf(buf,"<form method=\"get\" action=\"/Kvit\"><input value=\"КВИТИРОВАТЬ\" type=\"submit\"></form><br>", NumEvents);
+..\Src\httpserver-netconn.c(1532): warning:  #226-D: invalid format string conversion
+                sprintf(buf,"<hr style=\"width: 100%; height: 2px;\"><h2 align=\"center\">Другое</h2><div style=\"float:left;\">Ошибки SD: %d<Br>Свободно памяти на SD: %s<Br>Качаство мобильной связи: %d<Br><Br><form method=\"get\" action=\"/EXIT\"><input value=\"ВЫЙТИ\" type=\"submit\"></form></div><div style=\"float:right;\"><form method=\"get\" action=\"Reboot\"><input type=\"submit\" value=\"Перезагрузить\"></form><br><br><a href=\"config.txt\" download style=\"text-decoration: none;\"><input value=\"Скачать конфигурацию прибора\" type=\"button\"></a></div>", FileErr, &smsMSG[10][0], Holding_reg[1]);
+..\Src\httpserver-netconn.c(1536): warning:  #226-D: invalid format string conversion
+                sprintf(buf,"<hr style=\"width: 100%; height: 2px;\"><h2 align=\"center\">Другое</h2><div style=\"float:left;\"><form method=\"get\" action=\"/CheckRelay\"><input value=\"РЕЛЕ\" type=\"submit\"></form><form method=\"get\" action=\"/HardReset\"><input value=\"СБРОС ДО ЗАВОДСКИХ\" type=\"submit\"></form>Ошибки SD: %d<Br>Свободно памяти на SD: %s<Br>Качаство мобильной связи: %d<Br><Br><form method=\"get\" action=\"/EXIT\"><input value=\"ВЫЙТИ\" type=\"submit\"></form></div><div style=\"float:right;\"><form method=\"get\" action=\"Reboot\"><input type=\"submit\" value=\"Перезагрузить\"></form><br><br><a href=\"config.txt\" download style=\"text-decoration: none;\"><input value=\"Скачать конфигурацию прибора\" type=\"button\"></a></div>", FileErr, &smsMSG[10][0], Holding_reg[1]);
+..\Src\httpserver-netconn.c: 33 warnings, 0 errors
+compiling stm32f4xx_hal_eth.c...
+compiling stm32f4xx_hal_rcc.c...
+compiling stm32f4xx_hal_pwr_ex.c...
+compiling stm32f4xx_hal_flash.c...
+compiling stm32f4xx_hal_gpio.c...
+compiling stm32f4xx_hal_tim.c...
+compiling stm32f4xx_hal.c...
+compiling stm32f4xx_hal_rcc_ex.c...
+compiling stm32f4xx_hal_sd.c...
+compiling stm32f4xx_hal_pwr.c...
+compiling stm32f4xx_hal_tim_ex.c...
+compiling stm32f4xx_hal_flash_ramfunc.c...
+compiling stm32f4xx_hal_uart.c...
+compiling stm32f4xx_hal_dma_ex.c...
+compiling stm32f4xx_hal_flash_ex.c...
+compiling stm32f4xx_hal_dma.c...
+compiling stm32f4xx_hal_cortex.c...
+compiling stm32f4xx_ll_sdmmc.c...
+compiling stm32f4xx_hal_rtc.c...
+compiling stm32f4xx_hal_rtc_ex.c...
+compiling stm32f4xx_hal_iwdg.c...
+compiling stm32f4xx_hal_hcd.c...
+compiling stm32f4xx_ll_usb.c...
+compiling system_stm32f4xx.c...
+assembling startup_stm32f407xx.s...
+compiling api_lib.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/api/api_lib.c(117): warning:  #177-D: variable "msg" was declared but never referenced
+      struct api_msg msg;
+../Middlewares/Third_Party/LwIP/src/api/api_lib.c: 2 warnings, 0 errors
+compiling dhcp6.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/core/ipv6/dhcp6.c: 1 warning, 0 errors
+compiling memp.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/core/memp.c: 1 warning, 0 errors
+compiling sys_arch.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/system/OS/sys_arch.c: 1 warning, 0 errors
+compiling raw.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/core/raw.c: 1 warning, 0 errors
+compiling tcp_out.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/core/tcp_out.c: 1 warning, 0 errors
+compiling ethip6.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/core/ipv6/ethip6.c: 1 warning, 0 errors
+compiling stats.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/core/stats.c: 1 warning, 0 errors
+compiling tcp.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/core/tcp.c: 1 warning, 0 errors
+compiling lcp.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/netif/ppp/lcp.c: 1 warning, 0 errors
+compiling utils.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/netif/ppp/utils.c: 1 warning, 0 errors
+compiling igmp.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/core/ipv4/igmp.c: 1 warning, 0 errors
+compiling ip.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/core/ip.c: 1 warning, 0 errors
+compiling ppp.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/netif/ppp/ppp.c: 1 warning, 0 errors
+compiling ip6.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/core/ipv6/ip6.c: 1 warning, 0 errors
+compiling netifapi.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/api/netifapi.c: 1 warning, 0 errors
+compiling sys.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/core/sys.c: 1 warning, 0 errors
+compiling lowpan6.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/netif/lowpan6.c: 1 warning, 0 errors
+compiling netdb.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/api/netdb.c: 1 warning, 0 errors
+compiling icmp.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/core/ipv4/icmp.c: 1 warning, 0 errors
+compiling mem.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/core/mem.c: 1 warning, 0 errors
+compiling init.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/core/init.c: 1 warning, 0 errors
+compiling sha1.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/netif/ppp/polarssl/sha1.c: 1 warning, 0 errors
+compiling pppol2tp.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/netif/ppp/pppol2tp.c: 1 warning, 0 errors
+compiling fs.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/apps/httpd/fs.c: 1 warning, 0 errors
+compiling inet6.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/core/ipv6/inet6.c: 1 warning, 0 errors
+compiling md5.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/netif/ppp/polarssl/md5.c: 1 warning, 0 errors
+compiling netif.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/core/netif.c: 1 warning, 0 errors
+compiling vj.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/netif/ppp/vj.c: 1 warning, 0 errors
+compiling arc4.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/netif/ppp/polarssl/arc4.c: 1 warning, 0 errors
+compiling eap.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/netif/ppp/eap.c: 1 warning, 0 errors
+compiling ccp.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/netif/ppp/ccp.c: 1 warning, 0 errors
+compiling slipif.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/netif/slipif.c: 1 warning, 0 errors
+compiling demand.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/netif/ppp/demand.c: 1 warning, 0 errors
+compiling api_msg.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/api/api_msg.c: 1 warning, 0 errors
+compiling dns.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/core/dns.c: 1 warning, 0 errors
+compiling mppe.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/netif/ppp/mppe.c: 1 warning, 0 errors
+compiling nd6.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/core/ipv6/nd6.c: 1 warning, 0 errors
+compiling ipv6cp.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/netif/ppp/ipv6cp.c: 1 warning, 0 errors
+compiling tcp_in.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/core/tcp_in.c: 1 warning, 0 errors
+compiling pppoe.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/netif/ppp/pppoe.c: 1 warning, 0 errors
+compiling ip4.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/core/ipv4/ip4.c: 1 warning, 0 errors
+compiling ipcp.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/netif/ppp/ipcp.c: 1 warning, 0 errors
+compiling dhcp.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/core/ipv4/dhcp.c: 1 warning, 0 errors
+compiling md4.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/netif/ppp/polarssl/md4.c: 1 warning, 0 errors
+compiling upap.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/netif/ppp/upap.c: 1 warning, 0 errors
+compiling auth.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/netif/ppp/auth.c: 1 warning, 0 errors
+compiling pppos.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/netif/ppp/pppos.c: 1 warning, 0 errors
+compiling icmp6.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/core/ipv6/icmp6.c: 1 warning, 0 errors
+compiling multilink.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/netif/ppp/multilink.c: 1 warning, 0 errors
+compiling pppapi.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/netif/ppp/pppapi.c: 1 warning, 0 errors
+compiling fsm.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/netif/ppp/fsm.c: 1 warning, 0 errors
+compiling autoip.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/core/ipv4/autoip.c: 1 warning, 0 errors
+compiling def.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/core/def.c: 1 warning, 0 errors
+compiling udp.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/core/udp.c: 1 warning, 0 errors
+compiling ip4_addr.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/core/ipv4/ip4_addr.c: 1 warning, 0 errors
+compiling mld6.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/core/ipv6/mld6.c: 1 warning, 0 errors
+compiling pbuf.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/core/pbuf.c: 1 warning, 0 errors
+compiling ethernet.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/netif/ethernet.c: 1 warning, 0 errors
+compiling ip6_frag.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/core/ipv6/ip6_frag.c: 1 warning, 0 errors
+compiling sockets.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/api/sockets.c: 1 warning, 0 errors
+compiling chap-md5.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/netif/ppp/chap-md5.c: 1 warning, 0 errors
+compiling inet_chksum.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/core/inet_chksum.c: 1 warning, 0 errors
+compiling des.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/netif/ppp/polarssl/des.c: 1 warning, 0 errors
+compiling netbuf.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/api/netbuf.c: 1 warning, 0 errors
+compiling tcpip.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/api/tcpip.c: 1 warning, 0 errors
+compiling ip4_frag.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/core/ipv4/ip4_frag.c: 1 warning, 0 errors
+compiling httpd.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/apps/httpd/httpd.c: 1 warning, 0 errors
+compiling ecp.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/netif/ppp/ecp.c: 1 warning, 0 errors
+compiling magic.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/netif/ppp/magic.c: 1 warning, 0 errors
+compiling etharp.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/core/ipv4/etharp.c: 1 warning, 0 errors
+compiling timeouts.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/core/timeouts.c: 1 warning, 0 errors
+compiling chap-new.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/netif/ppp/chap-new.c: 1 warning, 0 errors
+compiling err.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/api/err.c: 1 warning, 0 errors
+compiling pppcrypt.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/netif/ppp/pppcrypt.c: 1 warning, 0 errors
+compiling chap_ms.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/netif/ppp/chap_ms.c: 1 warning, 0 errors
+compiling ip6_addr.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/core/ipv6/ip6_addr.c: 1 warning, 0 errors
+compiling eui64.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Middlewares/Third_Party/LwIP/src/netif/ppp/eui64.c: 1 warning, 0 errors
+compiling mbcrc.c...
+..\ModbusMaster\mbcrc.c(56): warning:  #815-D: type qualifier on return type is meaningless
+  volatile unsigned short CRC16( unsigned char* pucFrame, unsigned char usLen )
+..\ModbusMaster\mbcrc.c: 1 warning, 0 errors
+compiling ModBus_master.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+../Inc/LogSD.h(12): warning:  #1295-D: Deprecated declaration MBusMasterPlaner - give arg types
+  void MBusMasterPlaner();
+../Inc/LogSD.h(16): warning:  #1295-D: Deprecated declaration TCP_GSM_Listener - give arg types
+  void TCP_GSM_Listener();
+..\ModbusMaster\ModBus_master.c(48): warning:  #1000-D: a storage class may not be specified here
+  extern struct devices
+..\ModbusMaster\ModBus_master.c(165): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+       CRC16_M(data_master_IN, ad-2);
+..\ModbusMaster\ModBus_master.c(230): warning:  #111-D: statement is unreachable
+                        n_master_com=0;
+..\ModbusMaster\ModBus_master.c(137): warning:  #177-D: variable "Dev" was declared but never referenced
+        struct devices Dev;
+..\ModbusMaster\ModBus_master.c(275): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+    CRC16_M(data_master_OUT, 6); 
+..\ModbusMaster\ModBus_master.c(280): warning:  #188-D: enumerated type mixed with another type
+        MB_LED_ON;      
+..\ModbusMaster\ModBus_master.c(302): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+    CRC16_M(data_master_OUT, len+7); 
+..\ModbusMaster\ModBus_master.c(328): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+                        SendGSM(cmgf, strlen(cmgf));
+..\ModbusMaster\ModBus_master.c(332): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+                        SendGSM(cmgl, strlen(cmgl));
+..\ModbusMaster\ModBus_master.c(348): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+                        SendGSM(cmgd, strlen(cmgd));
+..\ModbusMaster\ModBus_master.c(372): warning:  #513-D: a value of type "unsigned char *" cannot be assigned to an entity of type "char *"
+                smsnum = &Phones[v][0];
+..\ModbusMaster\ModBus_master.c(388): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+                                        strcpy(data_com3_OUT,cmgf);
+..\ModbusMaster\ModBus_master.c(438): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+                                sprintf(pdu1,"%02X",tlen);
+..\ModbusMaster\ModBus_master.c(439): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                                        strcat(cyrbuf,pdu1);
+..\ModbusMaster\ModBus_master.c(441): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+                                strcpy(pdu1,text);
+..\ModbusMaster\ModBus_master.c(468): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+                                                sprintf(pdu1,"%04X",pdu2[i]);   
+..\ModbusMaster\ModBus_master.c(470): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                                                strcat(cyrbuf,pdu1);
+..\ModbusMaster\ModBus_master.c(480): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+                                        sprintf(pdu1,"%d",b);   
+..\ModbusMaster\ModBus_master.c(481): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+                                        strcat(cmgs1,pdu1);
+..\ModbusMaster\ModBus_master.c(485): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+                                        strcpy(data_com3_OUT,cmgs1);
+..\ModbusMaster\ModBus_master.c(497): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                                        len = strlen(data_com3_OUT);
+..\ModbusMaster\ModBus_master.c(374): warning:  #177-D: variable "phone" was declared but never referenced
+                char phone[15]={0}, done=0;
+..\ModbusMaster\ModBus_master.c(374): warning:  #177-D: variable "done" was declared but never referenced
+                char phone[15]={0}, done=0;
+..\ModbusMaster\ModBus_master.c(700): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+                SendGSM(ipr, strlen(ipr));
+..\ModbusMaster\ModBus_master.c(703): warning:  #188-D: enumerated type mixed with another type
+                        HAL_GPIO_WritePin(GPIOD, GPIO_PIN_13,0);
+..\ModbusMaster\ModBus_master.c(705): warning:  #188-D: enumerated type mixed with another type
+                HAL_GPIO_WritePin(GPIOD, GPIO_PIN_13,1);
+..\ModbusMaster\ModBus_master.c(730): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(cops, strlen(cops));
+..\ModbusMaster\ModBus_master.c(733): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(cops1, strlen(cops1)); // Запрос имени оператора
+..\ModbusMaster\ModBus_master.c(736): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+        if((strstr(data_com3_IN, "MegaFon")!=0) || (strstr(data_com3_IN, "MEGAFON")!=0))
+..\ModbusMaster\ModBus_master.c(736): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+        if((strstr(data_com3_IN, "MegaFon")!=0) || (strstr(data_com3_IN, "MEGAFON")!=0))
+..\ModbusMaster\ModBus_master.c(749): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                if((strstr(data_com3_IN, "Beeline")!=0) || (strstr(data_com3_IN, "BEELINE")!=0))
+..\ModbusMaster\ModBus_master.c(749): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                if((strstr(data_com3_IN, "Beeline")!=0) || (strstr(data_com3_IN, "BEELINE")!=0))
+..\ModbusMaster\ModBus_master.c(762): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                if((strstr(data_com3_IN, "Tele2")!=0) || (strstr(data_com3_IN, "TELE2")!=0))
+..\ModbusMaster\ModBus_master.c(762): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                if((strstr(data_com3_IN, "Tele2")!=0) || (strstr(data_com3_IN, "TELE2")!=0))
+..\ModbusMaster\ModBus_master.c(775): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                        if((strstr(data_com3_IN, "MTS")!=0) || (strstr(data_com3_IN, "mts")!=0))
+..\ModbusMaster\ModBus_master.c(775): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                        if((strstr(data_com3_IN, "MTS")!=0) || (strstr(data_com3_IN, "mts")!=0))
+..\ModbusMaster\ModBus_master.c(793): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(ate, strlen(ate)); // отключение эхо
+..\ModbusMaster\ModBus_master.c(795): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(cmgf, strlen(cmgf));
+..\ModbusMaster\ModBus_master.c(797): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(cfun, strlen(cfun));
+..\ModbusMaster\ModBus_master.c(799): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(sxrat, strlen(sxrat));
+..\ModbusMaster\ModBus_master.c(801): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(cmee, strlen(cmee));
+..\ModbusMaster\ModBus_master.c(811): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(&cmd[i][0], strlen(&cmd[i][0]));
+..\ModbusMaster\ModBus_master.c(688): warning:  #177-D: variable "csq" was declared but never referenced
+        char *csq = "at+csq";
+..\ModbusMaster\ModBus_master.c(689): warning:  #177-D: variable "atf" was declared but never referenced
+        char *atf = "at&f";
+..\ModbusMaster\ModBus_master.c(690): warning:  #177-D: variable "sics" was declared but never referenced
+        char *sics = "at^sics?";
+..\ModbusMaster\ModBus_master.c(691): warning:  #177-D: variable "sici" was declared but never referenced
+        char *sici = "at^sici=5";
+..\ModbusMaster\ModBus_master.c(692): warning:  #177-D: variable "atd" was declared but never referenced
+        char *atd = "atd0876";
+..\ModbusMaster\ModBus_master.c(693): warning:  #177-D: variable "at" was declared but never referenced
+        char *at = "AT";
+..\ModbusMaster\ModBus_master.c(695): warning:  #177-D: variable "SCFG" was declared but never referenced
+        char *SCFG = "AT^SCFG=\"Serial/Interface/Allocation\", \"2\"";
+..\ModbusMaster\ModBus_master.c(1077): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+                                                zapros_M10(bufer);
+..\ModbusMaster\ModBus_master.c(840): warning:  #177-D: variable "p" was declared but never referenced
+        struct pbuf *p, *q;
+..\ModbusMaster\ModBus_master.c(840): warning:  #177-D: variable "q" was declared but never referenced
+        struct pbuf *p, *q;
+..\ModbusMaster\ModBus_master.c(841): warning:  #177-D: variable "indx" was declared but never referenced
+    uint32_t  len,indx;
+..\ModbusMaster\ModBus_master.c(1145): warning:  #177-D: label "m_ok1" was declared but never referenced
+                                m_ok1:    
+..\ModbusMaster\ModBus_master.c(1475): warning:  #111-D: statement is unreachable
+                                break;
+..\ModbusMaster\ModBus_master.c(1514): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(csq, strlen(csq));
+..\ModbusMaster\ModBus_master.c(1518): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+        strtok_r(data_com3_IN," ",&token_buff);
+..\ModbusMaster\ModBus_master.c(1529): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+        unsigned int len = strlen(cmd);
+..\ModbusMaster\ModBus_master.c(1543): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+        unsigned int len = strlen(cmd);
+..\ModbusMaster\ModBus_master.c(1557): warning:  #1-D: last line of file ends without a newline
+  }
+..\ModbusMaster\ModBus_master.c: 63 warnings, 0 errors
+compiling Modbus_slave.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+..\ModbusSlave\Modbus_slave.c(74): warning:  #223-D: function "strcpy" declared implicitly
+                                                strcpy(smsbuf, smsnum);
+..\ModbusSlave\Modbus_slave.c(75): warning:  #223-D: function "strlen" declared implicitly
+                                                data_com1[2] = strlen(smsnum);
+..\ModbusSlave\Modbus_slave.c: 3 warnings, 0 errors
+compiling ftp.c...
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+..\FTP\ftp.c(126): warning:  #1000-D: a storage class may not be specified here
+  extern struct devices
+..\FTP\ftp.c(206): warning:  #223-D: function "strcpy" declared implicitly
+    strcpy(fno.fname,lfn); 
+..\FTP\ftp.c(230): warning:  #223-D: function "strlen" declared implicitly
+  if(strlen(fno.fname)==0) // Проверка длинны лонг имени файла, если меньше 8.3, то используем SFN
+..\FTP\ftp.c(302): warning:  #181-D: argument is incompatible with corresponding format string conversion
+                                                                                                min,
+..\FTP\ftp.c(303): warning:  #225-D: the format string ends before this argument
+                                                                                                fno.fname                    
+..\FTP\ftp.c(200): warning:  #177-D: variable "fn" was declared but never referenced
+        char *fn;   /* This function is assuming non-Unicode cfg. */
+..\FTP\ftp.c(202): warning:  #550-D: variable "y" was set but never used
+        u32_t d,mon,y,h,min,s;
+..\FTP\ftp.c(202): warning:  #177-D: variable "s" was declared but never referenced
+        u32_t d,mon,y,h,min,s;
+..\FTP\ftp.c(432): warning:  #68-D: integer conversion resulted in a change of sign
+        cmd_id = -1;
+..\FTP\ftp.c(435): warning:  #223-D: function "strcasecmp" declared implicitly
+      if(strcasecmp(ftp_cmd_list[i].name,cmd)==0)
+..\FTP\ftp.c(462): warning:  #223-D: function "strcmp" declared implicitly
+        pcb->au_state = (strcmp("admin",arg)==0)?FTP_AUSTATE_PASS:FTP_AUSTATE_USER_BAD;
+..\FTP\ftp.c(490): warning:  #223-D: function "strcasecmp" declared implicitly
+        if((strcasecmp(arg,"A")==0) || (strcasecmp(arg,"I")==0)) FTP_SendReply(conn,FTP_REPLY_200);
+..\FTP\ftp.c(507): warning:  #1182-D: a declaration cannot have a label
+                        char PASVbuf[100]={0};
+..\FTP\ftp.c(546): warning:  #223-D: function "strtok_r" declared implicitly
+                        IP_ADDR[0] =  atoi((char*)strtok_r(arg,port_delimiters,&token_buff))  & 0xFF;   
+..\FTP\ftp.c(654): warning:  #223-D: function "strlen" declared implicitly
+          i = strlen(arg);
+..\FTP\ftp.c(454): warning:  #546-D: transfer of control bypasses initialization of:
+            variable "PASVbuf" (declared at line 507)
+            variable "ftpport1" (declared at line 510)
+            variable "ftpport2" (declared at line 510)
+            variable "excurrent" (declared at line 702)
+    switch ( cmd_id )
+    ^
+..\FTP\ftp.c(1074): warning:  #223-D: function "memset" declared implicitly
+    memset(&fpcb,0,sizeof(fpcb));
+..\FTP\ftp.c(1104): warning:  #223-D: function "strtok_r" declared implicitly
+              cmd = (char*)strtok_r(fpcb.buff,cmd_delimiters,&token_buff);
+..\FTP\ftp.c(1189): warning:  #550-D: variable "ftp" was set but never used
+        BaseType_t ftp;
+..\FTP\ftp.c: 20 warnings, 0 errors
+compiling LogSD.c...
+../Inc/LogSD.h(12): warning:  #1295-D: Deprecated declaration MBusMasterPlaner - give arg types
+  void MBusMasterPlaner();
+../Inc/LogSD.h(16): warning:  #1295-D: Deprecated declaration TCP_GSM_Listener - give arg types
+  void TCP_GSM_Listener();
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+..\Src\LogSD.c(131): warning:  #177-D: variable "heap" was declared but never referenced
+        size_t heap;
+..\Src\LogSD.c(284): warning:  #177-D: variable "i" was declared but never referenced
+        unsigned int ad, n, j, i; 
+..\Src\LogSD.c(523): warning:  #177-D: variable "token_buff" was declared but never referenced
+        char* token_buff;       
+..\Src\LogSD.c(524): warning:  #177-D: variable "a" was declared but never referenced
+        unsigned short int a,b,c, time;
+..\Src\LogSD.c(524): warning:  #177-D: variable "b" was declared but never referenced
+        unsigned short int a,b,c, time;
+..\Src\LogSD.c(524): warning:  #177-D: variable "c" was declared but never referenced
+        unsigned short int a,b,c, time;
+..\Src\LogSD.c(524): warning:  #550-D: variable "time" was set but never used
+        unsigned short int a,b,c, time;
+..\Src\LogSD.c(525): warning:  #177-D: variable "ad1" was declared but never referenced
+        u32_t ad1,ad2;
+..\Src\LogSD.c(525): warning:  #177-D: variable "ad2" was declared but never referenced
+        u32_t ad1,ad2;
+..\Src\LogSD.c(604): warning:  #188-D: enumerated type mixed with another type
+                                                        result = osSemaphoreWait(SemPlan, Timeout);
+..\Src\LogSD.c(637): warning:  #188-D: enumerated type mixed with another type
+                                                result = osSemaphoreWait(SemPlan, Timeout);
+..\Src\LogSD.c(593): warning:  #550-D: variable "result" was set but never used
+                osStatus result = osOK;
+..\Src\LogSD.c(845): warning:  #940-D: missing return statement at end of non-void function "CreateLOG"
+  }
+..\Src\LogSD.c(684): warning:  #177-D: variable "sdatestructureget" was declared but never referenced
+        RTC_DateTypeDef sdatestructureget;
+..\Src\LogSD.c(685): warning:  #177-D: variable "stimestructureget" was declared but never referenced
+    RTC_TimeTypeDef stimestructureget;
+..\Src\LogSD.c(688): warning:  #550-D: variable "p" was set but never used
+  char p=0;
+..\Src\LogSD.c(704): warning:  #177-D: label "refresh" was declared but never referenced
+  refresh:
+..\Src\LogSD.c(873): warning:  #177-D: variable "b" was declared but never referenced
+        unsigned int p = 0, b, c;
+..\Src\LogSD.c(1295): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                len = strlen(&win[i][0]);
+..\Src\LogSD.c(1725): warning:  #940-D: missing return statement at end of non-void function "convert_utf8"
+  }
+..\Src\LogSD.c(1745): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(SFSAstat, strlen(SFSAstat));
+..\Src\LogSD.c(1748): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(cmd, strlen(cmd));
+..\Src\LogSD.c(1753): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(SFSAwrite, strlen(SFSAwrite));
+..\Src\LogSD.c(1754): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+        while(strstr(data_com3_IN, "CONNECT")==0)
+..\Src\LogSD.c(1760): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                        while(strstr(data_com3_IN, "^SFSA: 0")==0)
+..\Src\LogSD.c(1765): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+  SendGSM(SFSAclose, strlen(SFSAclose));
+..\Src\LogSD.c(1739): warning:  #177-D: variable "SFSAopen" was declared but never referenced
+        char* SFSAopen = "AT^SFSA=\"open\", a:/%s, 2";
+..\Src\LogSD.c(1819): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(cmgf, strlen(cmgf));
+..\Src\LogSD.c(1821): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(cmee, strlen(cmee));
+..\Src\LogSD.c(1823): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(ate, strlen(ate));
+..\Src\LogSD.c(1828): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(&cmd[i][0], strlen(&cmd[i][0]));
+..\Src\LogSD.c(1832): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(&cmd[20][0], strlen(&cmd[20][0])); 
+..\Src\LogSD.c(1874): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                        SendGSM(buf2, strlen(buf2));
+..\Src\LogSD.c(1881): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                                        if(strstr(data_com3_IN, "ERROR")!=0)
+..\Src\LogSD.c(1887): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                                        OK = strstr(data_com3_IN, "^SISW: 5,");
+..\Src\LogSD.c(1912): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                                        if(strstr(data_com3_IN, "ERROR")!=0)
+..\Src\LogSD.c(1917): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                                        OK = strstr(data_com3_IN, "OK");
+..\Src\LogSD.c(1961): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+                SendGSM(&cmd[23][0], strlen(&cmd[23][0]));
+..\Src\LogSD.c(1777): warning:  #550-D: variable "f_err" was set but never used
+        FRESULT f_err;
+..\Src\LogSD.c(1778): warning:  #177-D: variable "len" was declared but never referenced
+        char len;
+..\Src\LogSD.c(1783): warning:  #177-D: variable "cfun" was declared but never referenced
+        char *cfun = "at+cfun=1";
+..\Src\LogSD.c(1784): warning:  #177-D: variable "sxrat" was declared but never referenced
+        char *sxrat = "at^sxrat=2";
+..\Src\LogSD.c(1785): warning:  #177-D: variable "sist" was declared but never referenced
+        char *sist = "at^sist=5";
+..\Src\LogSD.c(1787): warning:  #177-D: variable "scfg" was declared but never referenced
+        char *scfg = "at+creg=2";
+..\Src\LogSD.c(1788): warning:  #177-D: variable "creg" was declared but never referenced
+        char *creg = "at+creg?";
+..\Src\LogSD.c(2005): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(cmgf, strlen(cmgf));
+..\Src\LogSD.c(2007): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(cfun, strlen(cfun));
+..\Src\LogSD.c(2009): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(sxrat, strlen(sxrat));
+..\Src\LogSD.c(2011): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(cmee, strlen(cmee));
+..\Src\LogSD.c(2013): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(ate, strlen(ate));
+..\Src\LogSD.c(2018): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(&cmd[i][0], strlen(&cmd[i][0]));
+..\Src\LogSD.c(2024): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+                SendGSM(&cmd[20][0], strlen(&cmd[20][0])); 
+..\Src\LogSD.c(2027): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+                SendGSM(sist, strlen(sist));
+..\Src\LogSD.c(2031): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                if(strstr(data_com3_IN, "CONNECT")!=0)
+..\Src\LogSD.c(2047): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                        if(strstr(data_com3_IN, "closed")!=0 || strstr(data_com3_IN, "^SISR: ")!=0)
+..\Src\LogSD.c(2047): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                        if(strstr(data_com3_IN, "closed")!=0 || strstr(data_com3_IN, "^SISR: ")!=0)
+..\Src\LogSD.c(2055): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+                SendGSMTrans(&cmd[14][0], strlen(&cmd[14][0]));
+..\Src\LogSD.c(2058): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+                SendGSM(&cmd[13][0], strlen(&cmd[13][0])); 
+..\Src\LogSD.c(1974): warning:  #177-D: variable "len" was declared but never referenced
+                char len;
+..\Src\LogSD.c(1975): warning:  #177-D: variable "buf2" was declared but never referenced
+        unsigned char buf2[20];
+..\Src\LogSD.c(1976): warning:  #177-D: variable "OK" was declared but never referenced
+        char* OK;
+..\Src\LogSD.c(2116): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                if(strlen(&smsMSG[4][0])!=0)
+..\Src\LogSD.c(2128): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+                        SendGSM(&cmd[i][0], strlen(&cmd[i][0]));
+..\Src\LogSD.c(2133): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(&cmd[20][0], strlen(&cmd[20][0])); 
+..\Src\LogSD.c(2139): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(sist, strlen(sist));
+..\Src\LogSD.c(2144): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(&cmd[2][0], strlen(&cmd[2][0]));
+..\Src\LogSD.c(2147): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(&cmd[3][0], strlen(&cmd[3][0]));
+..\Src\LogSD.c(2150): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(&cmd[18][0], strlen(&cmd[18][0]));
+..\Src\LogSD.c(2155): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(BIN, strlen(BIN));
+..\Src\LogSD.c(2158): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(PASV, strlen(PASV));
+..\Src\LogSD.c(2164): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                                                strtok_r(data_com3_IN,"(",&token_buff);
+..\Src\LogSD.c(2173): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSMTrans(&cmd[14][0], strlen(&cmd[14][0])); 
+..\Src\LogSD.c(2187): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+                        SendGSM(&cmd[i][0], strlen(&cmd[i][0]));
+..\Src\LogSD.c(2193): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(sist, strlen(sist));
+..\Src\LogSD.c(2198): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(&cmd[17][0], strlen(&cmd[17][0])); 
+..\Src\LogSD.c(2200): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(&cmd[17][0], strlen(&cmd[17][0])); 
+..\Src\LogSD.c(2205): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                if(atoi((char*)strtok_r(data_com3_IN," ",&token_buff)) == 550)
+..\Src\LogSD.c(2219): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(&cmd[22][0], strlen(&cmd[22][0]));
+..\Src\LogSD.c(2222): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSMTrans(&cmd[14][0], strlen(&cmd[14][0])); 
+..\Src\LogSD.c(2226): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(&cmd[15][0], strlen(&cmd[15][0]));
+..\Src\LogSD.c(2231): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+                SendGSM(sist3, strlen(sist3));
+..\Src\LogSD.c(2293): warning:  #167-D: argument of type "int *" is incompatible with parameter of type "UINT *"
+                                f_err2 = f_read(&file2, buf123, 512,&c);
+..\Src\LogSD.c(2336): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSMTrans(&cmd[14][0], strlen(&cmd[14][0])); 
+..\Src\LogSD.c(2341): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(&cmd[16][0], strlen(&cmd[16][0])); 
+..\Src\LogSD.c(2346): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(sist, strlen(sist));
+..\Src\LogSD.c(2349): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(&cmd[17][0], strlen(&cmd[17][0])); 
+..\Src\LogSD.c(2351): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(&cmd[17][0], strlen(&cmd[17][0])); 
+..\Src\LogSD.c(2355): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+                strtok_r(data_com3_IN," ",&token_buff);
+..\Src\LogSD.c(2367): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(QUIT, strlen(QUIT));
+..\Src\LogSD.c(2370): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSMTrans(&cmd[14][0], strlen(&cmd[14][0])); 
+..\Src\LogSD.c(2374): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(&cmd[13][0], strlen(&cmd[13][0])); 
+..\Src\LogSD.c(2072): warning:  #177-D: variable "len" was declared but never referenced
+        char len, exist = 0;
+..\Src\LogSD.c(2073): warning:  #177-D: variable "buf2" was declared but never referenced
+        unsigned char buf2[20], error = 0, flagE = 0;
+..\Src\LogSD.c(2073): warning:  #177-D: variable "flagE" was declared but never referenced
+        unsigned char buf2[20], error = 0, flagE = 0;
+..\Src\LogSD.c(2077): warning:  #177-D: variable "OK" was declared but never referenced
+        char* OK;
+..\Src\LogSD.c(2078): warning:  #177-D: variable "cmgf" was declared but never referenced
+        char *cmgf="at+cmgf=1";
+..\Src\LogSD.c(2079): warning:  #177-D: variable "cmee" was declared but never referenced
+        char *cmee = "at+cmee=1";
+..\Src\LogSD.c(2080): warning:  #177-D: variable "cfun" was declared but never referenced
+        char *cfun = "at+cfun=1";
+..\Src\LogSD.c(2081): warning:  #177-D: variable "sxrat" was declared but never referenced
+        char *sxrat = "at^sxrat=2";
+..\Src\LogSD.c(2084): warning:  #177-D: variable "ate" was declared but never referenced
+        char *ate = "ATE0";
+..\Src\LogSD.c(2089): warning:  #177-D: variable "USER" was declared but never referenced
+        char* USER = "USER npptik_nir";
+..\Src\LogSD.c(2090): warning:  #177-D: variable "PASS" was declared but never referenced
+        char* PASS = "PASS iF0wUAqhD4o0wuBmtH0J";
+..\Src\LogSD.c(2091): warning:  #177-D: variable "SYST" was declared but never referenced
+        char* SYST = "SYST";
+..\Src\LogSD.c(2092): warning:  #177-D: variable "FEAT" was declared but never referenced
+        char* FEAT = "FEAT";
+..\Src\LogSD.c(2406): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(cmdDel, strlen(cmdDel));
+..\Src\LogSD.c(2412): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                if(strstr(data_com3_IN, "OK")!=0)
+..\Src\LogSD.c(2416): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                else if(strstr(data_com3_IN, "ERROR")!=0)
+..\Src\LogSD.c(2470): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(cmgf, strlen(cmgf));
+..\Src\LogSD.c(2472): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(cmee, strlen(cmee));
+..\Src\LogSD.c(2474): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(ate, strlen(ate));
+..\Src\LogSD.c(2479): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(&cmd[i][0], strlen(&cmd[i][0]));
+..\Src\LogSD.c(2483): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(&cmd[20][0], strlen(&cmd[20][0])); 
+..\Src\LogSD.c(2490): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                if(((strstr(data_com3_IN, "SIS: 5,0,2100,\"FGET: boot.bin\"")!=0)||(strstr(data_com3_IN, "SIS: 5,0,2100,\"fget boot.bin\"")!=0))&&(strstr(data_com3_IN, "Goodbye")!=0))
+..\Src\LogSD.c(2490): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                if(((strstr(data_com3_IN, "SIS: 5,0,2100,\"FGET: boot.bin\"")!=0)||(strstr(data_com3_IN, "SIS: 5,0,2100,\"fget boot.bin\"")!=0))&&(strstr(data_com3_IN, "Goodbye")!=0))
+..\Src\LogSD.c(2490): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                if(((strstr(data_com3_IN, "SIS: 5,0,2100,\"FGET: boot.bin\"")!=0)||(strstr(data_com3_IN, "SIS: 5,0,2100,\"fget boot.bin\"")!=0))&&(strstr(data_com3_IN, "Goodbye")!=0))
+..\Src\LogSD.c(2495): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                else if(strstr(data_com3_IN, "ERROR")!=0)
+..\Src\LogSD.c(2508): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(&cmd[23][0], strlen(&cmd[23][0])); 
+..\Src\LogSD.c(2435): warning:  #177-D: variable "cfun" was declared but never referenced
+        char *cfun = "at+cfun=1";
+..\Src\LogSD.c(2436): warning:  #177-D: variable "sxrat" was declared but never referenced
+        char *sxrat = "at^sxrat=2";
+..\Src\LogSD.c(2437): warning:  #177-D: variable "sist" was declared but never referenced
+        char *sist = "at^sist=5";
+..\Src\LogSD.c(2439): warning:  #177-D: variable "scfg" was declared but never referenced
+        char *scfg = "at+creg=2";
+..\Src\LogSD.c(2440): warning:  #177-D: variable "creg" was declared but never referenced
+        char *creg = "at+creg?";
+..\Src\LogSD.c(2556): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *"
+                                        fgsm_read(buf,bytes);
+..\Src\LogSD.c(2603): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+        SendGSM(cmdSize, strlen(cmdSize));
+..\Src\LogSD.c(2609): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                if(strstr(data_com3_IN, "OK")!=0)
+..\Src\LogSD.c(2611): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                        return atoi(&data_com3_IN[9]);
+..\Src\LogSD.c(2613): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                else if(strstr(data_com3_IN, "ERROR")!=0)
+..\Src\LogSD.c(2633): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+                SendGSM(cmdOpen, strlen(cmdOpen));
+..\Src\LogSD.c(2638): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                if(strstr(data_com3_IN, "OK")!=0)
+..\Src\LogSD.c(2642): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                else if(strstr(data_com3_IN, "ERROR")!=0)
+..\Src\LogSD.c(2664): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+                SendGSM(cmdRead, strlen(cmdRead));
+..\Src\LogSD.c(2670): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                if(strstr(&data_com3_IN[len+slen], "OK\r\n")!=0)
+..\Src\LogSD.c(2675): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                else if(strstr(data_com3_IN, "\r\nERROR\r\n")!=0)
+..\Src\LogSD.c(2695): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+                SendGSM(fgclose, strlen(fgclose));
+..\Src\LogSD.c(2700): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                if(strstr(data_com3_IN, "OK")!=0)
+..\Src\LogSD.c(2704): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                else if(strstr(data_com3_IN, "ERROR")!=0)
+..\Src\LogSD.c(2725): warning:  #177-D: variable "time" was declared but never referenced
+        unsigned short int a,b,c, time;
+..\Src\LogSD.c(2726): warning:  #177-D: variable "ad1" was declared but never referenced
+        u32_t ad1,ad2;
+..\Src\LogSD.c(2726): warning:  #177-D: variable "ad2" was declared but never referenced
+        u32_t ad1,ad2;
+..\Src\LogSD.c: 142 warnings, 0 errors
+compiling Event.c...
+../Inc/LogSD.h(12): warning:  #1295-D: Deprecated declaration MBusMasterPlaner - give arg types
+  void MBusMasterPlaner();
+../Inc/LogSD.h(16): warning:  #1295-D: Deprecated declaration TCP_GSM_Listener - give arg types
+  void TCP_GSM_Listener();
+../Inc/lwipopts.h(157): warning:  #47-D: incompatible redefinition of macro "LWIP_STATS" (declared at line 123)
+  #define LWIP_STATS 1
+..\Src\Event.c(27): warning:  #1000-D: a storage class may not be specified here
+  extern struct devices
+..\Src\Event.c(697): warning:  #188-D: enumerated type mixed with another type
+                                RELAY_OFF
+..\Src\Event.c(698): warning:  #188-D: enumerated type mixed with another type
+                                REL_LED_OFF;
+..\Src\Event.c(750): warning:  #188-D: enumerated type mixed with another type
+                                RELAY_ON;
+..\Src\Event.c(751): warning:  #188-D: enumerated type mixed with another type
+                                REL_LED_ON;
+..\Src\Event.c(835): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+                                                                sprintf(&data_com3_OUT[0],"+++");
+..\Src\Event.c(848): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+                                                                sprintf(&data_com3_OUT[0],"at^sist=%d\r\n",TransMode);
+..\Src\Event.c(849): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+                                                                line3=strlen(&data_com3_OUT[0]); n_com3=0;
+..\Src\Event.c(873): warning:  #188-D: enumerated type mixed with another type
+                                        RELAY_OFF;
+..\Src\Event.c(874): warning:  #188-D: enumerated type mixed with another type
+                                        REL_LED_OFF;
+..\Src\Event.c(886): warning:  #188-D: enumerated type mixed with another type
+                                                RELAY_OFF;
+..\Src\Event.c(887): warning:  #188-D: enumerated type mixed with another type
+                                                REL_LED_OFF;
+..\Src\Event.c: 15 warnings, 0 errors
+compiling usbh_core.c...
+compiling usbh_ctlreq.c...
+compiling usbh_ioreq.c...
+compiling usbh_pipes.c...
+compiling usb_host.c...
+compiling usbh_conf.c...
+compiling usbh_cdc.c...
+linking...
+Program Size: Code=139288 RO-data=356844 RW-data=1528 ZI-data=118288  
+FromELF: creating hex file...
+After Build - User command #1: C:\Keil_v5\\ARM\ARMCC\bin\fromelf.exe --bin --output=BB2.bin .\BB2\BB2.axf
+".\BB2\BB2.axf" - 0 Error(s), 415 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.4.2.0.pack
+                ARM::CMSIS:CORE:3.40.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 3.40.0
+
+<h2>Collection of Component include folders:</h2>
+  D:\Repos\TIK-REG\MDK-ARM\RTE
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include
+  C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:3.40.0
+      Source file:   CMSIS\UserCodeTemplates\ARM\ITM_Retarget.c
+</pre>
+</body>
+</html>
