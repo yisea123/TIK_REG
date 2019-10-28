@@ -57,8 +57,8 @@ extern struct devices
 	char regsI[51];
 	char floatsH[300];
 	char floatsI[300];
-	unsigned short int Holding[100];
-	unsigned short int Input[100];
+	short int Holding[100];
+	short int Input[100];
 	unsigned short int PatternH[20][2];
 	unsigned short int PatternI[20][2];
 	unsigned int Packets,BadPackets;

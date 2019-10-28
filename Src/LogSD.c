@@ -45,7 +45,7 @@ extern USBH_HandleTypeDef hUsbHostHS;
 extern unsigned int    n_com3,n_com33, line3;
 extern unsigned char   data_com3_OUT[2000],data_com3_IN[1200];
 
-struct devices
+volatile struct devices
 {
 	unsigned char addr, interface,QH,QI,NumQH,NumQI,sizeH,sizeI;			// адресс слэйв для опроса и интерфейс
 	unsigned char ipadd[4];
@@ -57,8 +57,8 @@ struct devices
 	char regsI[51];
 	char floatsH[300];
 	char floatsI[300];
-	unsigned short int Holding[100];
-	unsigned short int Input[100];
+	short int Holding[100];
+	short int Input[100];
 	unsigned short int PatternH[20][2];
 	unsigned short int PatternI[20][2];
 	unsigned int Packets,BadPackets;
@@ -1132,7 +1132,7 @@ while(!LOADING)
 										
 					
 					float holdf;
-					unsigned int hi,k;
+					int hi,k;
 						p = 0;
 						k = 0;
 					
@@ -1148,9 +1148,10 @@ while(!LOADING)
 													hi = StructQwAdr[d]->Holding[k];
 													j++;
 													k++;
-													hi |= StructQwAdr[d]->Holding[k]<<16;
-													holdf = *(float*)&hi;
-													sprintf(buf,";\"%f\"",holdf);
+													hi += StructQwAdr[d]->Holding[k]<<16;
+													holdf = *((float*)&hi);
+													//memcpy(&holdf, &hi, sizeof holdf);
+													sprintf(buf,";%f",holdf);
 													*strchr(buf,'.') = ',';
 													strcat(strbuf,buf);
 													p++;
@@ -1162,9 +1163,10 @@ while(!LOADING)
 													hi = StructQwAdr[d]->Holding[k]<<16;
 													j++;
 													k++;
-													hi |= StructQwAdr[d]->Holding[k];
-													holdf = *(float*)&hi;
-													sprintf(buf,";\"%f\"",holdf);
+													hi += StructQwAdr[d]->Holding[k];
+													holdf = *((float*)&hi);
+													//memcpy(&holdf, &hi, sizeof holdf);
+													sprintf(buf,";%f",holdf);
 													*strchr(buf,'.') = ',';
 													strcat(strbuf,buf);
 													p++;
@@ -1194,12 +1196,14 @@ while(!LOADING)
 												if(swFloat)
 												{
 													hi=0;
+													holdf = 0.0;
 													hi = StructQwAdr[d]->Input[k];
 													j++;
 													k++;
-													hi |= StructQwAdr[d]->Input[k]<<16;
-													holdf = *(float*)&hi;
-													sprintf(buf,";\"%f\"",holdf);
+													hi += StructQwAdr[d]->Input[k]<<16;
+													holdf = *((float*)&hi);																														
+													//memcpy(&holdf, &hi, sizeof holdf);													
+													sprintf(buf,";%f",holdf);																		
 													*strchr(buf,'.') = ',';
 													strcat(strbuf,buf);																							
 													p++;
@@ -1208,12 +1212,14 @@ while(!LOADING)
 												else
 												{
 													hi=0;
+													holdf = 0.0;
 													hi = StructQwAdr[d]->Input[k]<<16;
 													j++;
 													k++;
-													hi |= StructQwAdr[d]->Input[k];
-													holdf = *(float*)&hi;
-													sprintf(buf,";\"%f\"",holdf);
+													hi += StructQwAdr[d]->Input[k];
+													holdf = *((float*)&hi);																																																				
+													//memcpy(&holdf, &hi, sizeof holdf);													
+													sprintf(buf,";%f",holdf);													
 													*strchr(buf,'.') = ',';
 													strcat(strbuf,buf);																							
 													p++;
